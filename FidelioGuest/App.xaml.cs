@@ -11,7 +11,19 @@ namespace FidelioGuest
     /// <summary>
     /// Логика взаимодействия для App.xaml
     /// </summary>
+  
     public partial class App : Application
     {
+
+        //[STAThread]
+        // Without this attribute, Clipboard will get null
+        [STAThreadAttribute]
+        public static void Main()
+        {
+            var application = new App();
+            application.InitializeComponent();
+            application.Run();
+        }
+
     }
 }
