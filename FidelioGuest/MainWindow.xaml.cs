@@ -21,6 +21,7 @@ namespace FidelioGuest
     /// </summary>
     public partial class MainWindow : Window
     {
+        
         public MainWindow()
         {
             InitializeComponent();
@@ -31,6 +32,7 @@ namespace FidelioGuest
         {
             lblInfo.Content="Windows loaded!";
 
+       
             DispatcherTimer timer = new DispatcherTimer();
             timer.Tick += new EventHandler(Timer_Tick);
             timer.Interval = new TimeSpan(0, 0, 5);
@@ -41,6 +43,7 @@ namespace FidelioGuest
         {
             lblInfo.Content = DateTime.Now.ToLongTimeString();
          }
+
 
         private void ButCheck_Click(object sender, RoutedEventArgs e)
         {
@@ -59,6 +62,7 @@ namespace FidelioGuest
             }           
             return returnString;
         }
+
         
     }
 }
