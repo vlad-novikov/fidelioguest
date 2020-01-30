@@ -70,7 +70,7 @@ namespace FidelioGuest
             {
 
                 // fire event
-                txtResID.Text = "Clipboard updated";
+                txtResID.Text = "Clipboard updated: " + GetClipboardData();
 
                 this.ClipboardUpdate?.Invoke(this, new EventArgs());
                 // execute command
